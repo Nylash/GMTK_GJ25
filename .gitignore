@@ -97,3 +97,9 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+/GMTK_GJ25Project/Library
+/GMTK_GJ25Project/UserSettings
+/GMTK_GJ25Project/Logs
+/GMTK_GJ25Project/Temp
+/GMTK_GJ25Project/obj
