@@ -17,7 +17,9 @@ public class TrackManager : Singleton<TrackManager>
     [SerializeField] private List<GridCell> _gridCells = new List<GridCell>();//Use only for debug and populate dictionary
     [Header("_______________________________________________")]
     [Header("Obstacles Configuration")]
+    [SerializeField] private Collider _finishLineTrigger;
     [SerializeField] private List<GameObject> _obstaclePrefab = new List<GameObject>();
+    [SerializeField] private float _timeBetweenObstacle = 5f;
     [SerializeField] private float _minDistanceWithPlayer = 5f;
 
     public SplineContainer ContainerCentralLane { get => _containerCentralLane; }
@@ -26,15 +28,24 @@ public class TrackManager : Singleton<TrackManager>
 
     private Dictionary<Vector2Int, GridCell> _grid = new Dictionary<Vector2Int, GridCell>();
 
-    private Vector3? _debugSpherePosition = null;
+    protected override void OnAwake()
+    {
+        _grid.Clear();
+        foreach (GridCell cell in _gridCells)
+        {
+            _grid[cell.Coordinates] = cell;
+        }
+    }
 
     private void Start()
     {
-        foreach (GridCell cell in _gridCells)
-        {
-            _grid.Add(cell.Coordinates, cell);
-        }
-        InvokeRepeating(nameof(SpawnObstacle), 0f, 0.5f);
+        InvokeRepeating(nameof(SpawnObstacle), _timeBetweenObstacle, _timeBetweenObstacle);
+        Invoke(nameof(ActivateFinishLine), 1f);
+    }
+
+    private void ActivateFinishLine()
+    {
+        _finishLineTrigger.enabled = true;
     }
 
     private void SpawnObstacle()
@@ -68,7 +79,6 @@ public class TrackManager : Singleton<TrackManager>
             {
                 if (hitCollider.CompareTag("Player"))
                 {
-                    _debugSpherePosition = tempCell.WorldPosition;
                     playerHit = true;
                     break;
                 }
@@ -306,17 +316,13 @@ public class TrackManager : Singleton<TrackManager>
                 DrawDebugCell(cell, _laneWidth);
             }
         }
-        if (_debugSpherePosition.HasValue)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(_debugSpherePosition.Value, _minDistanceWithPlayer);
-        }
     }
 
-    //[ContextMenu("Generate Lane Splines")]
+    [ContextMenu("Generate Lane Splines")]
     public void GenerateLaneSplines()
     {
-        if (_containerCentralLane == null)
+        //Tracks are good, comment code for security
+        /*if (_containerCentralLane == null)
         {
             Debug.LogError("Center spline not assigned.");
             return;
@@ -330,7 +336,7 @@ public class TrackManager : Singleton<TrackManager>
         var leftKnots = OffsetKnotArray(_containerCentralLane.Spline, -_laneWidth);
         var rightKnots = OffsetKnotArray(_containerCentralLane.Spline, +_laneWidth);
         _containerInteriorLane = CreateLaneObject("InteriorLaneSpline", leftKnots);
-        _containerExteriorLane = CreateLaneObject("ExteriorLaneSpline", rightKnots);
+        _containerExteriorLane = CreateLaneObject("ExteriorLaneSpline", rightKnots);*/
 
         CreateGrid();
     }
@@ -353,12 +359,15 @@ public class TrackManager : Singleton<TrackManager>
                 float laneOffset = (lane - 1) * _laneWidth; // lane 0: -1, lane 1: 0, lane 2: +1
                 Vector3 pos = (Vector3)centerPos + right * laneOffset;
 
+                float3 posAdjustedToLane;
+                SplineUtility.GetNearestPoint(GetSpline(lane - 1), pos, out posAdjustedToLane, out _);
+
                 //tangent = SplineUtility.EvaluateTangent(GetSpline(lane - 1), t); //Use local tangent
 
                 _gridCells.Add(new GridCell
                 {
                     Coordinates = new Vector2Int(lane, row),
-                    WorldPosition = pos,
+                    WorldPosition = posAdjustedToLane,
                     Tangent = tangent,
                     IsOccupied = false
                 });

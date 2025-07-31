@@ -1,22 +1,39 @@
+using System.Collections;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Splines;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PlayerManager : Singleton<PlayerManager>
 {
     [Header("_______________________________________________")]
     [Header("Player Movement")]
-    [SerializeField] private float _speed;
+    [SerializeField] private float _initialSpeed;
+    [SerializeField] private float _speedIncreasePerSecond;
     [SerializeField] private bool _reverse;
     [SerializeField] private Transform debugCube;
+    [Header("_______________________________________________")]
+    [Header("Player Health")]
+    [SerializeField] private int _initialHealth = 3;
+    [SerializeField] private float _iframeDuration = 1f;
+
+    private Animator _animator;
 
     private Spline _centralLane;
     private Spline _exteriorLane;
     private Spline _interiorLane;
     private Spline _targetLane;
-    private float _normalizedT;
     private int _laneIndex = 0;
     private int _prevLaneIndex = 0;
+
+    private float _speed;
+    private float _normalizedT;
+
+    private int _currentHealth;
+    private bool _inIFrame;
+
+    private int _lapCount;
 
     private void Start()
     {
@@ -24,8 +41,13 @@ public class PlayerManager : Singleton<PlayerManager>
         _exteriorLane = TrackManager.Instance.ContainerExteriorLane.Spline;
         _interiorLane = TrackManager.Instance.ContainerInteriorLane.Spline;
 
+        _speed = _initialSpeed;
+        _currentHealth = _initialHealth;
+
         _targetLane = _centralLane;
         InitializeSplinePosition(transform.position);
+
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -33,6 +55,57 @@ public class PlayerManager : Singleton<PlayerManager>
         PlayerMovement();
 
         SwitchLane();
+
+        _speed += _speedIncreasePerSecond * Time.deltaTime;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (other.tag)
+        {
+            case "Obstacle":
+                if (!_inIFrame)
+                    HitObstacle(other.gameObject);
+                break;
+            case "FinishLine":
+                _lapCount++;
+                UIManager.Instance.lapCounter.text = _lapCount.ToString();
+                break;
+            default:
+                Debug.Log("This object tag is not handle by player trigger detection:" +  other.gameObject.name);
+                break;
+        }
+    }
+
+    private void HitObstacle(GameObject go)
+    {
+        _currentHealth--;
+        _inIFrame = true;
+        _animator.SetBool("IFrame", true);
+        StartCoroutine(ResetIFrame());
+        switch (_currentHealth)
+        {
+            case 0:
+                //Defeat
+                UIManager.Instance.hp1.gameObject.SetActive(false);
+                break;
+            case 1:
+                UIManager.Instance.hp2.gameObject.SetActive(false);
+                break;
+            case 2:
+                UIManager.Instance.hp3.gameObject.SetActive(false);
+                 break;
+            default:
+                Debug.Log("Incorrect health value " + _currentHealth);
+                break;
+        }
+    }
+
+    private IEnumerator ResetIFrame()
+    {
+        yield return new WaitForSeconds(_iframeDuration);
+        _inIFrame = false;
+        _animator.SetBool("IFrame", false);
     }
 
     private void PlayerMovement()
