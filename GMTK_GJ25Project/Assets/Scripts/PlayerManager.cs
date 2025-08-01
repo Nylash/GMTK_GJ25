@@ -18,6 +18,8 @@ public class PlayerManager : Singleton<PlayerManager>
     [SerializeField] private int _initialHealth = 3;
     [SerializeField] private float _iframeDuration = 1f;
 
+    public bool gamePaused;
+
     private Animator _animator;
 
     private Spline _centralLane;
@@ -52,6 +54,8 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private void Update()
     {
+        if (gamePaused) return;
+
         PlayerMovement();
 
         SwitchLane();
@@ -86,7 +90,8 @@ public class PlayerManager : Singleton<PlayerManager>
         switch (_currentHealth)
         {
             case 0:
-                //Defeat
+                gamePaused = true;
+                UIManager.Instance.GameEnded();
                 UIManager.Instance.hp1.gameObject.SetActive(false);
                 break;
             case 1:
