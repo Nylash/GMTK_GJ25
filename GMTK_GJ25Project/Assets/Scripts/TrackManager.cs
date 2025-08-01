@@ -21,6 +21,7 @@ public class TrackManager : Singleton<TrackManager>
     [SerializeField] private List<GameObject> _obstaclePrefab = new List<GameObject>();
     [SerializeField] private float _timeBetweenObstacle = 5f;
     [SerializeField] private float _minDistanceWithPlayer = 5f;
+    [SerializeField] private GameObject _VFXpop;
 
     public SplineContainer ContainerCentralLane { get => _containerCentralLane; }
     public SplineContainer ContainerExteriorLane { get => _containerExteriorLane; }
@@ -50,12 +51,20 @@ public class TrackManager : Singleton<TrackManager>
 
     private void SpawnObstacle()
     {
+        if (PlayerManager.Instance.gamePaused)
+            return;
+
         GridCell targetCell = PickRandomGridCell();
         if (targetCell == null)
             return;
+
+        Instantiate(_VFXpop, targetCell.WorldPosition, Quaternion.identity);
+
         GameObject obstacle = Instantiate(_obstaclePrefab[UnityEngine.Random.Range(0, _obstaclePrefab.Count)], targetCell.WorldPosition, Quaternion.identity);
-        obstacle.transform.right = targetCell.Tangent.normalized; // Align obstacle with the lane direction
+        //obstacle.transform.right = targetCell.Tangent.normalized; // Align obstacle with the lane direction
+        //obstacle.transform.GetChild(0).transform.rotation = Quaternion.Euler(new Vector3(0, -obstacle.transform.rotation.y, 0));
         targetCell.IsOccupied = true; // Mark the cell as occupied
+        obstacle.GetComponentInChildren<SpriteRenderer>().sortingOrder = PlayerManager.Instance.GetOrderFromZ(obstacle.transform.position.z);
     }
 
     private GridCell PickRandomGridCell()
@@ -105,7 +114,7 @@ public class TrackManager : Singleton<TrackManager>
                     continue;
             }
 
-            /* Check path integrity (commented out for now)
+            /*
             if (!HasReachableCellFromPreviousRow(row, lane))// No reachable cell in the previous row, skip
                 continue;
 

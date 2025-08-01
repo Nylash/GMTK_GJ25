@@ -835,6 +835,180 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &630254560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 630254561}
+  - component: {fileID: 630254563}
+  - component: {fileID: 630254562}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &630254561
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630254560}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1345542436}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &630254562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630254560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Spam space to drink !
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &630254563
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630254560}
+  m_CullTransparentMesh: 1
+--- !u!1 &722260695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 722260696}
+  m_Layer: 5
+  m_Name: MiniGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &722260696
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722260695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1192168460}
+  m_Father: {fileID: 1908966942}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.3, y: 0.06}
+  m_AnchorMax: {x: 0.7, y: 0.66}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &816305609
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,7 +1128,7 @@ MonoBehaviour:
   _persistentSingleton: 0
   _containerCentralLane: {fileID: 1950669542}
   _laneWidth: 1.5
-  _numSegments: 30
+  _numSegments: 20
   _showGridDebug: 1
   _containerExteriorLane: {fileID: 434003825}
   _containerInteriorLane: {fileID: 310166840}
@@ -975,445 +1149,299 @@ MonoBehaviour:
     IsOccupied: 0
     IsReachable: 1
   - Coordinates: {x: 0, y: 1}
-    WorldPosition: {x: 6.5140295, y: 0, z: -5.8599997}
-    Tangent: {x: -21.177969, y: 0, z: -0.0000005364418}
+    WorldPosition: {x: 4.771235, y: 0, z: -5.86}
+    Tangent: {x: -21.621769, y: 0, z: 0.00000023841858}
     IsOccupied: 0
     IsReachable: 1
   - Coordinates: {x: 1, y: 1}
-    WorldPosition: {x: 6.514026, y: 0, z: -7.7999997}
-    Tangent: {x: -21.177969, y: 0, z: -0.0000005364418}
+    WorldPosition: {x: 4.771235, y: 0, z: -7.7999997}
+    Tangent: {x: -21.621769, y: 0, z: 0.00000023841858}
     IsOccupied: 0
     IsReachable: 1
   - Coordinates: {x: 2, y: 1}
-    WorldPosition: {x: 6.514021, y: 0, z: -9.46}
-    Tangent: {x: -21.177969, y: 0, z: -0.0000005364418}
+    WorldPosition: {x: 4.77124, y: 0, z: -9.460001}
+    Tangent: {x: -21.621769, y: 0, z: 0.00000023841858}
     IsOccupied: 0
     IsReachable: 1
   - Coordinates: {x: 0, y: 2}
-    WorldPosition: {x: 3.0278237, y: 0, z: -5.86}
-    Tangent: {x: -21.825586, y: 0, z: 0.00000071525574}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 1, y: 2}
-    WorldPosition: {x: 3.027827, y: 0, z: -7.8000007}
-    Tangent: {x: -21.825586, y: 0, z: 0.00000071525574}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 2, y: 2}
-    WorldPosition: {x: 3.027827, y: 0, z: -9.46}
-    Tangent: {x: -21.825586, y: 0, z: 0.00000071525574}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 0, y: 3}
     WorldPosition: {x: -0.4590977, y: 0, z: -5.86}
     Tangent: {x: -21.538229, y: 0, z: 0.00000047683716}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 3}
+  - Coordinates: {x: 1, y: 2}
     WorldPosition: {x: -0.45909774, y: 0, z: -7.7999997}
     Tangent: {x: -21.538229, y: 0, z: 0.00000047683716}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 3}
+  - Coordinates: {x: 2, y: 2}
     WorldPosition: {x: -0.4590977, y: 0, z: -9.46}
     Tangent: {x: -21.538229, y: 0, z: 0.00000047683716}
     IsOccupied: 0
     IsReachable: 1
+  - Coordinates: {x: 0, y: 3}
+    WorldPosition: {x: -5.6895795, y: 0, z: -5.86}
+    Tangent: {x: -19.178936, y: 0, z: 0}
+    IsOccupied: 0
+    IsReachable: 1
+  - Coordinates: {x: 1, y: 3}
+    WorldPosition: {x: -5.6895795, y: 0, z: -7.8}
+    Tangent: {x: -19.178936, y: 0, z: 0}
+    IsOccupied: 0
+    IsReachable: 1
+  - Coordinates: {x: 2, y: 3}
+    WorldPosition: {x: -5.6895795, y: 0, z: -9.46}
+    Tangent: {x: -19.178936, y: 0, z: 0}
+    IsOccupied: 0
+    IsReachable: 1
   - Coordinates: {x: 0, y: 4}
-    WorldPosition: {x: -3.9452786, y: 0, z: -5.86}
-    Tangent: {x: -20.262604, y: 0, z: 0}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 1, y: 4}
-    WorldPosition: {x: -3.945282, y: 0, z: -7.8}
-    Tangent: {x: -20.262604, y: 0, z: 0}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 2, y: 4}
-    WorldPosition: {x: -3.945282, y: 0, z: -9.46}
-    Tangent: {x: -20.262604, y: 0, z: 0}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 0, y: 5}
-    WorldPosition: {x: -7.4333262, y: 0, z: -5.86}
-    Tangent: {x: -17.709892, y: 0, z: 0}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 1, y: 5}
-    WorldPosition: {x: -7.4333262, y: 0, z: -7.8}
-    Tangent: {x: -17.709892, y: 0, z: 0}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 2, y: 5}
-    WorldPosition: {x: -7.4333262, y: 0, z: -9.46}
-    Tangent: {x: -17.709892, y: 0, z: 0}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 0, y: 6}
     WorldPosition: {x: -10.8046465, y: 0, z: -5.806306}
     Tangent: {x: -20.99894, y: 0, z: 0.70490015}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 6}
+  - Coordinates: {x: 1, y: 4}
     WorldPosition: {x: -10.918413, y: 0, z: -7.7845826}
     Tangent: {x: -20.99894, y: 0, z: 0.70490015}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 6}
+  - Coordinates: {x: 2, y: 4}
     WorldPosition: {x: -10.868089, y: 0, z: -9.46}
     Tangent: {x: -20.99894, y: 0, z: 0.70490015}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 7}
-    WorldPosition: {x: -13.9654455, y: 0, z: -5.488694}
-    Tangent: {x: -18.21931, y: 0, z: 3.5127988}
+  - Coordinates: {x: 0, y: 5}
+    WorldPosition: {x: -15.573434, y: 0, z: -5.1378207}
+    Tangent: {x: -16.471987, y: 0, z: 5.041718}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 7}
-    WorldPosition: {x: -14.38118, y: 0, z: -7.410194}
-    Tangent: {x: -18.21931, y: 0, z: 3.5127988}
+  - Coordinates: {x: 1, y: 5}
+    WorldPosition: {x: -16.072073, y: 0, z: -6.9935336}
+    Tangent: {x: -16.471987, y: 0, z: 5.041718}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 7}
-    WorldPosition: {x: -14.4032955, y: 0, z: -9.396243}
-    Tangent: {x: -18.21931, y: 0, z: 3.5127988}
+  - Coordinates: {x: 2, y: 5}
+    WorldPosition: {x: -16.298891, y: 0, z: -9.1467905}
+    Tangent: {x: -16.471987, y: 0, z: 5.041718}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 8}
-    WorldPosition: {x: -16.929295, y: 0, z: -4.667091}
-    Tangent: {x: -14.412974, y: 0, z: 6.676895}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 1, y: 8}
-    WorldPosition: {x: -17.701414, y: 0, z: -6.3776913}
-    Tangent: {x: -14.412974, y: 0, z: 6.676895}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 2, y: 8}
-    WorldPosition: {x: -18.420313, y: 0, z: -8.557647}
-    Tangent: {x: -14.412974, y: 0, z: 6.676895}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 0, y: 9}
+  - Coordinates: {x: 0, y: 6}
     WorldPosition: {x: -19.054602, y: 0, z: -3.177822}
     Tangent: {x: -9.129074, y: 0, z: 10.29097}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 9}
+  - Coordinates: {x: 1, y: 6}
     WorldPosition: {x: -20.510368, y: 0, z: -4.3575296}
     Tangent: {x: -9.129074, y: 0, z: 10.29097}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 9}
+  - Coordinates: {x: 2, y: 6}
     WorldPosition: {x: -22.546185, y: 0, z: -5.1296606}
     Tangent: {x: -9.129074, y: 0, z: 10.29097}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 10}
-    WorldPosition: {x: -20.053272, y: 0, z: -1.0155671}
-    Tangent: {x: -2.4829445, y: 0, z: 14.051704}
+  - Coordinates: {x: 0, y: 7}
+    WorldPosition: {x: -20.131758, y: 0, z: 0.3536781}
+    Tangent: {x: 0.7751703, y: 0, z: 12.920499}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 10}
-    WorldPosition: {x: -22.012241, y: 0, z: -1.2639948}
-    Tangent: {x: -2.4829445, y: 0, z: 14.051704}
+  - Coordinates: {x: 1, y: 7}
+    WorldPosition: {x: -22.1024, y: 0, z: 0.47420698}
+    Tangent: {x: 0.7751703, y: 0, z: 12.920499}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 10}
-    WorldPosition: {x: -23.77461, y: 0, z: -1.4948801}
-    Tangent: {x: -2.4829445, y: 0, z: 14.051704}
+  - Coordinates: {x: 2, y: 7}
+    WorldPosition: {x: -23.940668, y: 0, z: 0.4641989}
+    Tangent: {x: 0.7751703, y: 0, z: 12.920499}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 11}
-    WorldPosition: {x: -19.897686, y: 0, z: 1.7437949}
-    Tangent: {x: 3.8136988, y: 0, z: 11.915376}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 1, y: 11}
-    WorldPosition: {x: -21.78726, y: 0, z: 2.1830075}
-    Tangent: {x: 3.8136988, y: 0, z: 11.915376}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 2, y: 11}
-    WorldPosition: {x: -23.731203, y: 0, z: 2.4295635}
-    Tangent: {x: 3.8136988, y: 0, z: 11.915376}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 0, y: 12}
+  - Coordinates: {x: 0, y: 8}
     WorldPosition: {x: -18.643274, y: 0, z: 3.6964257}
     Tangent: {x: 10.318258, y: 0, z: 9.11874}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 12}
+  - Coordinates: {x: 1, y: 8}
     WorldPosition: {x: -19.894205, y: 0, z: 5.057722}
     Tangent: {x: 10.318258, y: 0, z: 9.11874}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 12}
+  - Coordinates: {x: 2, y: 8}
     WorldPosition: {x: -21.6876, y: 0, z: 6.569931}
     Tangent: {x: 10.318258, y: 0, z: 9.11874}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 13}
-    WorldPosition: {x: -16.273943, y: 0, z: 5.0012875}
-    Tangent: {x: 16.288528, y: 0, z: 5.9466133}
+  - Coordinates: {x: 0, y: 9}
+    WorldPosition: {x: -14.82765, y: 0, z: 5.392845}
+    Tangent: {x: 18.93325, y: 0, z: 4.391964}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 13}
-    WorldPosition: {x: -16.887304, y: 0, z: 6.7764935}
-    Tangent: {x: 16.288528, y: 0, z: 5.9466133}
+  - Coordinates: {x: 1, y: 9}
+    WorldPosition: {x: -15.21609, y: 0, z: 7.269558}
+    Tangent: {x: 18.93325, y: 0, z: 4.391964}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 13}
-    WorldPosition: {x: -17.384253, y: 0, z: 8.994336}
-    Tangent: {x: 16.288528, y: 0, z: 5.9466133}
+  - Coordinates: {x: 2, y: 9}
+    WorldPosition: {x: -15.35765, y: 0, z: 9.414583}
+    Tangent: {x: 18.93325, y: 0, z: 4.391964}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 14}
-    WorldPosition: {x: -13.28215, y: 0, z: 5.65401}
-    Tangent: {x: 21.373764, y: 0, z: 2.886468}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 1, y: 14}
-    WorldPosition: {x: -13.502657, y: 0, z: 7.5814867}
-    Tangent: {x: 21.373764, y: 0, z: 2.886468}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 2, y: 14}
-    WorldPosition: {x: -13.494075, y: 0, z: 9.594023}
-    Tangent: {x: 21.373764, y: 0, z: 2.886468}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 0, y: 15}
+  - Coordinates: {x: 0, y: 10}
     WorldPosition: {x: -9.915374, y: 0, z: 5.901051}
     Tangent: {x: 25.772942, y: 0, z: 0.018211365}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 15}
+  - Coordinates: {x: 1, y: 10}
     WorldPosition: {x: -10.02289, y: 0, z: 7.7993293}
     Tangent: {x: 25.772942, y: 0, z: 0.018211365}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 15}
+  - Coordinates: {x: 2, y: 10}
     WorldPosition: {x: -10.021821, y: 0, z: 9.63}
     Tangent: {x: 25.772942, y: 0, z: 0.018211365}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 16}
-    WorldPosition: {x: -6.540275, y: 0, z: 5.9200006}
-    Tangent: {x: 17.273178, y: 0, z: -0.0000014305115}
+  - Coordinates: {x: 0, y: 11}
+    WorldPosition: {x: -4.793862, y: 0, z: 5.9199996}
+    Tangent: {x: 19.893795, y: 0, z: -0.0000011920929}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 16}
-    WorldPosition: {x: -6.5402784, y: 0, z: 7.8}
-    Tangent: {x: 17.273178, y: 0, z: -0.0000014305115}
+  - Coordinates: {x: 1, y: 11}
+    WorldPosition: {x: -4.793865, y: 0, z: 7.8}
+    Tangent: {x: 19.893795, y: 0, z: -0.0000011920929}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 16}
-    WorldPosition: {x: -6.5402784, y: 0, z: 9.63}
-    Tangent: {x: 17.273178, y: 0, z: -0.0000014305115}
+  - Coordinates: {x: 2, y: 11}
+    WorldPosition: {x: -4.793865, y: 0, z: 9.63}
+    Tangent: {x: 19.893795, y: 0, z: -0.0000011920929}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 17}
-    WorldPosition: {x: -3.0530925, y: 0, z: 5.9199996}
-    Tangent: {x: 21.786865, y: 0, z: -0.0000009536743}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 1, y: 17}
-    WorldPosition: {x: -3.0530891, y: 0, z: 7.7999997}
-    Tangent: {x: 21.786865, y: 0, z: -0.0000009536743}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 2, y: 17}
-    WorldPosition: {x: -3.0530834, y: 0, z: 9.63}
-    Tangent: {x: 21.786865, y: 0, z: -0.0000009536743}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 0, y: 18}
+  - Coordinates: {x: 0, y: 12}
     WorldPosition: {x: 0.4351676, y: 0, z: 5.9199996}
     Tangent: {x: 24.166643, y: 0, z: -0.0000009536743}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 18}
+  - Coordinates: {x: 1, y: 12}
     WorldPosition: {x: 0.43517077, y: 0, z: 7.7999997}
     Tangent: {x: 24.166643, y: 0, z: -0.0000009536743}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 18}
+  - Coordinates: {x: 2, y: 12}
     WorldPosition: {x: 0.4351707, y: 0, z: 9.63}
     Tangent: {x: 24.166643, y: 0, z: -0.0000009536743}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 19}
-    WorldPosition: {x: 3.922104, y: 0, z: 5.92}
-    Tangent: {x: 25.16663, y: 0, z: 0.0000009536743}
+  - Coordinates: {x: 0, y: 13}
+    WorldPosition: {x: 5.6653347, y: 0, z: 5.92}
+    Tangent: {x: 25.227505, y: 0, z: 0.0000009536743}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 19}
-    WorldPosition: {x: 3.922104, y: 0, z: 7.799999}
-    Tangent: {x: 25.16663, y: 0, z: 0.0000009536743}
+  - Coordinates: {x: 1, y: 13}
+    WorldPosition: {x: 5.665338, y: 0, z: 7.7999997}
+    Tangent: {x: 25.227505, y: 0, z: 0.0000009536743}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 19}
-    WorldPosition: {x: 3.922104, y: 0, z: 9.629999}
-    Tangent: {x: 25.16663, y: 0, z: 0.0000009536743}
+  - Coordinates: {x: 2, y: 13}
+    WorldPosition: {x: 5.665338, y: 0, z: 9.629999}
+    Tangent: {x: 25.227505, y: 0, z: 0.0000009536743}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 20}
-    WorldPosition: {x: 7.408541, y: 0, z: 5.9199996}
-    Tangent: {x: 25.004036, y: 0, z: 0.0000038146973}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 1, y: 20}
-    WorldPosition: {x: 7.4085445, y: 0, z: 7.7999997}
-    Tangent: {x: 25.004036, y: 0, z: 0.0000038146973}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 2, y: 20}
-    WorldPosition: {x: 7.4085445, y: 0, z: 9.629999}
-    Tangent: {x: 25.004036, y: 0, z: 0.0000038146973}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 0, y: 21}
+  - Coordinates: {x: 0, y: 14}
     WorldPosition: {x: 10.635189, y: 0, z: 5.8668275}
     Tangent: {x: 24.214184, y: 0, z: 0.8336085}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 21}
+  - Coordinates: {x: 1, y: 14}
     WorldPosition: {x: 10.893982, y: 0, z: 7.848876}
     Tangent: {x: 24.214184, y: 0, z: 0.8336085}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 21}
+  - Coordinates: {x: 2, y: 14}
     WorldPosition: {x: 10.945528, y: 0, z: 9.63}
     Tangent: {x: 24.214184, y: 0, z: 0.8336085}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 22}
-    WorldPosition: {x: 13.990982, y: 0, z: 5.4904685}
-    Tangent: {x: 19.874413, y: 0, z: -3.5775664}
+  - Coordinates: {x: 0, y: 15}
+    WorldPosition: {x: 15.554083, y: 0, z: 5.122155}
+    Tangent: {x: 17.450104, y: 0, z: -5.6767793}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 22}
-    WorldPosition: {x: 14.368657, y: 0, z: 7.6217456}
-    Tangent: {x: 19.874413, y: 0, z: -3.5775664}
+  - Coordinates: {x: 1, y: 15}
+    WorldPosition: {x: 16.057007, y: 0, z: 7.198264}
+    Tangent: {x: 17.450104, y: 0, z: -5.6767793}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 22}
-    WorldPosition: {x: 14.403312, y: 0, z: 9.625002}
-    Tangent: {x: 19.874413, y: 0, z: -3.5775664}
+  - Coordinates: {x: 2, y: 15}
+    WorldPosition: {x: 16.313673, y: 0, z: 9.356196}
+    Tangent: {x: 17.450104, y: 0, z: -5.6767793}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 23}
-    WorldPosition: {x: 16.95882, y: 0, z: 4.6053143}
-    Tangent: {x: 14.838095, y: 0, z: -7.6223116}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 1, y: 23}
-    WorldPosition: {x: 17.664223, y: 0, z: 6.5315824}
-    Tangent: {x: 14.838095, y: 0, z: -7.6223116}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 2, y: 23}
-    WorldPosition: {x: 18.416351, y: 0, z: 8.713051}
-    Tangent: {x: 14.838095, y: 0, z: -7.6223116}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 0, y: 24}
+  - Coordinates: {x: 0, y: 16}
     WorldPosition: {x: 18.990892, y: 0, z: 3.1846356}
     Tangent: {x: 9.055759, y: 0, z: -10.645204}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 24}
+  - Coordinates: {x: 1, y: 16}
     WorldPosition: {x: 20.397045, y: 0, z: 4.403512}
     Tangent: {x: 9.055759, y: 0, z: -10.645204}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 24}
+  - Coordinates: {x: 2, y: 16}
     WorldPosition: {x: 22.334309, y: 0, z: 5.587039}
     Tangent: {x: 9.055759, y: 0, z: -10.645204}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 25}
-    WorldPosition: {x: 20.060616, y: 0, z: 0.96618044}
-    Tangent: {x: 2.6275177, y: 0, z: -11.611145}
+  - Coordinates: {x: 0, y: 17}
+    WorldPosition: {x: 20.125687, y: 0, z: -0.31847316}
+    Tangent: {x: -0.73497295, y: 0, z: -12.60988}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 25}
-    WorldPosition: {x: 21.962606, y: 0, z: 1.3272094}
-    Tangent: {x: 2.6275177, y: 0, z: -11.611145}
+  - Coordinates: {x: 1, y: 17}
+    WorldPosition: {x: 22.104408, y: 0, z: -0.40238684}
+    Tangent: {x: -0.73497295, y: 0, z: -12.60988}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 25}
-    WorldPosition: {x: 23.85492, y: 0, z: 1.4498429}
-    Tangent: {x: 2.6275177, y: 0, z: -11.611145}
+  - Coordinates: {x: 2, y: 17}
+    WorldPosition: {x: 23.943893, y: 0, z: -0.3537526}
+    Tangent: {x: -0.73497295, y: 0, z: -12.60988}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 26}
-    WorldPosition: {x: 19.919537, y: 0, z: -1.5067524}
-    Tangent: {x: -4.007184, y: 0, z: -11.787296}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 1, y: 26}
-    WorldPosition: {x: 21.77822, y: 0, z: -2.108844}
-    Tangent: {x: -4.007184, y: 0, z: -11.787296}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 2, y: 26}
-    WorldPosition: {x: 23.72408, y: 0, z: -2.3343441}
-    Tangent: {x: -4.007184, y: 0, z: -11.787296}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 0, y: 27}
+  - Coordinates: {x: 0, y: 18}
     WorldPosition: {x: 18.540329, y: 0, z: -3.5485766}
     Tangent: {x: -10.481594, y: 0, z: -9.262119}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 27}
+  - Coordinates: {x: 1, y: 18}
     WorldPosition: {x: 19.838057, y: 0, z: -4.9554043}
     Tangent: {x: -10.481594, y: 0, z: -9.262119}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 27}
+  - Coordinates: {x: 2, y: 18}
     WorldPosition: {x: 21.337994, y: 0, z: -6.646493}
     Tangent: {x: -10.481594, y: 0, z: -9.262119}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 0, y: 28}
-    WorldPosition: {x: 16.222013, y: 0, z: -4.833613}
-    Tangent: {x: -16.107761, y: 0, z: -6.182201}
+  - Coordinates: {x: 0, y: 19}
+    WorldPosition: {x: 14.751608, y: 0, z: -5.267412}
+    Tangent: {x: -18.560347, y: 0, z: -4.601942}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 1, y: 28}
-    WorldPosition: {x: 16.850992, y: 0, z: -6.713973}
-    Tangent: {x: -16.107761, y: 0, z: -6.182201}
+  - Coordinates: {x: 1, y: 19}
+    WorldPosition: {x: 15.186094, y: 0, z: -7.231473}
+    Tangent: {x: -18.560347, y: 0, z: -4.601942}
     IsOccupied: 0
     IsReachable: 1
-  - Coordinates: {x: 2, y: 28}
-    WorldPosition: {x: 17.301569, y: 0, z: -8.763038}
-    Tangent: {x: -16.107761, y: 0, z: -6.182201}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 0, y: 29}
-    WorldPosition: {x: 13.1757345, y: 0, z: -5.564278}
-    Tangent: {x: -20.803581, y: 0, z: -3.0369816}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 1, y: 29}
-    WorldPosition: {x: 13.478417, y: 0, z: -7.5636854}
-    Tangent: {x: -20.803581, y: 0, z: -3.0369816}
-    IsOccupied: 0
-    IsReachable: 1
-  - Coordinates: {x: 2, y: 29}
-    WorldPosition: {x: 13.489698, y: 0, z: -9.393224}
-    Tangent: {x: -20.803581, y: 0, z: -3.0369816}
+  - Coordinates: {x: 2, y: 19}
+    WorldPosition: {x: 15.322097, y: 0, z: -9.191283}
+    Tangent: {x: -18.560347, y: 0, z: -4.601942}
     IsOccupied: 0
     IsReachable: 1
   _finishLineTrigger: {fileID: 831056336}
   _obstaclePrefab:
   - {fileID: 6582916122976940520, guid: ab2f12de693c08647b8f61d16fa2feff, type: 3}
+  - {fileID: 6582916122976940520, guid: 4bcbabd0b89e9c0478f140a00d942765, type: 3}
+  - {fileID: 6582916122976940520, guid: e611ea9d1eb346c4fad64eec2d09cd95, type: 3}
+  - {fileID: 6582916122976940520, guid: 6cc5658d0f0692342b62d2d2dbae1e96, type: 3}
   _timeBetweenObstacle: 5
   _minDistanceWithPlayer: 5
+  _VFXpop: {fileID: 819855260494779139, guid: e7058aaace6932f4d8270640a6075f16, type: 3}
 --- !u!4 &831056335
 Transform:
   m_ObjectHideFlags: 0
@@ -1431,6 +1459,8 @@ Transform:
   - {fileID: 1950669543}
   - {fileID: 310166841}
   - {fileID: 434003826}
+  - {fileID: 1778444966}
+  - {fileID: 1297441230}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &831056336
@@ -1454,92 +1484,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0461087, y: 3.5243125, z: 6.78776}
   m_Center: {x: 3.1638477, y: 1.2621562, z: 7.682619}
---- !u!1 &858048493
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 858048494}
-  - component: {fileID: 858048496}
-  - component: {fileID: 858048495}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &858048494
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858048493}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0.4}
-  m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1650801706}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &858048495
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858048493}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &858048496
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858048493}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &883002262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,13 +1825,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961739749}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.46174863, y: 0, z: 0, w: 0.8870109}
-  m_LocalPosition: {x: 0, y: 28, z: -14.17}
+  m_LocalRotation: {x: 0.5735764, y: 0, z: 0, w: 0.8191521}
+  m_LocalPosition: {x: 0, y: 30, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 55, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 70, y: 0, z: 0}
 --- !u!1 &997521443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,7 +1999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _persistentSingleton: 0
   _initialSpeed: 5
-  _speedIncreasePerSecond: 0.05
+  _speedIncreasePerSecond: 0.1
   _reverse: 0
   debugCube: {fileID: 816305613}
   _initialHealth: 3
@@ -2149,6 +2093,67 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1192168459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1192168460}
+  - component: {fileID: 1192168462}
+  - component: {fileID: 1192168463}
+  m_Layer: 5
+  m_Name: DrinkBottle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1192168460
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192168459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1345542436}
+  m_Father: {fileID: 722260696}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1192168462
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192168459}
+  m_CullTransparentMesh: 1
+--- !u!114 &1192168463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192168459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e59681440cb034aa455edd605ef8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameCanvas: {fileID: 1345542435}
+  _waterSprite: {fileID: 1519858505}
+  _waterAmountDrinkPerAction: 0.2
 --- !u!1 &1259419544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,6 +2233,236 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1297441229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1297441230}
+  - component: {fileID: 1297441231}
+  m_Layer: 0
+  m_Name: Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1297441230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297441229}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10000, y: 10000, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 831056335}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!212 &1297441231
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297441229}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 5a62fe72e370ee84f9ea10eea63725b8, type: 3}
+  m_Color: {r: 0.7529412, g: 0.8117647, b: 0.30588236, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1345542435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1345542436}
+  - component: {fileID: 1345542441}
+  - component: {fileID: 1345542440}
+  - component: {fileID: 1345542439}
+  - component: {fileID: 1345542438}
+  - component: {fileID: 1345542437}
+  m_Layer: 5
+  m_Name: Game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1345542436
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345542435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 630254561}
+  - {fileID: 1519858504}
+  m_Father: {fileID: 1192168460}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1345542437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345542435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1345542438
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345542435}
+  m_CullTransparentMesh: 1
+--- !u!114 &1345542439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345542435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1345542440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345542435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1345542441
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345542435}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1361095914
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,6 +2538,81 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1519858503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1519858504}
+  - component: {fileID: 1519858506}
+  - component: {fileID: 1519858505}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1519858504
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519858503}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1345542436}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -600, y: -200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1519858505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519858503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.28773582, g: 1, b: 0.9999998, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5a62fe72e370ee84f9ea10eea63725b8, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 1
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1519858506
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519858503}
+  m_CullTransparentMesh: 1
 --- !u!1 &1591565038
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,8 +2894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1650801706}
-  - component: {fileID: 1650801705}
-  - component: {fileID: 1650801704}
+  - component: {fileID: 1650801707}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Player
@@ -2593,22 +2902,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &1650801704
-MeshRenderer:
+--- !u!4 &1650801706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650801701}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1185571898}
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
+--- !u!212 &1650801707
+SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650801701}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
+  m_RayTracingMode: 0
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -2616,7 +2940,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2629,39 +2953,25 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1650801705
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650801701}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1650801706
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650801701}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 858048494}
-  m_Father: {fileID: 1185571898}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: b5397821df4293d4fabda947dd7d2e67, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 10.24, y: 10.24}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1693253785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,6 +3086,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714129689}
   m_CullTransparentMesh: 1
+--- !u!1 &1778444965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1778444966}
+  - component: {fileID: 1778444968}
+  - component: {fileID: 1778444967}
+  m_Layer: 0
+  m_Name: Flip !
+  m_TagString: Flip
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1778444966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778444965}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 831056335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1778444967
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778444965}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.7, y: 2, z: 1}
+  m_Center: {x: 22, y: 1, z: 0}
+--- !u!65 &1778444968
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778444965}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.7, y: 2, z: 1}
+  m_Center: {x: -22, y: 1, z: 0}
 --- !u!1 &1879770023
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,6 +3333,9 @@ MonoBehaviour:
   lapCounter: {fileID: 1638748776}
   _endScreen: {fileID: 1714129689}
   _endScreenLapCounter: {fileID: 465752868}
+  _games:
+  - {fileID: 1192168463}
+  _timeBetweenMiniGame: {x: 15, y: 25}
 --- !u!114 &1908966939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3026,6 +3414,7 @@ RectTransform:
   - {fileID: 1693253786}
   - {fileID: 2035040506}
   - {fileID: 1714129690}
+  - {fileID: 722260696}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

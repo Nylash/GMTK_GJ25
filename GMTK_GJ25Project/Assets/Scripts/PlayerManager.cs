@@ -2,6 +2,7 @@ using System.Collections;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Splines;
 using static UnityEngine.Rendering.DebugUI;
 
@@ -20,7 +21,9 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public bool gamePaused;
 
+    private InputSystem_Actions _inputs;
     private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
 
     private Spline _centralLane;
     private Spline _exteriorLane;
@@ -37,6 +40,16 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private int _lapCount;
 
+    private void OnEnable() => _inputs.Player.Enable();
+    private void OnDisable() => _inputs.Player.Disable();
+
+    protected override void OnAwake()
+    {
+        _inputs = new InputSystem_Actions();
+        _inputs.Player.Left.performed += ctx => LeftInput();
+        _inputs.Player.Right.performed += ctx => RightInput();
+    }
+
     private void Start()
     {
         _centralLane = TrackManager.Instance.ContainerCentralLane.Spline;
@@ -50,6 +63,7 @@ public class PlayerManager : Singleton<PlayerManager>
         InitializeSplinePosition(transform.position);
 
         _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Update()
@@ -58,9 +72,9 @@ public class PlayerManager : Singleton<PlayerManager>
 
         PlayerMovement();
 
-        SwitchLane();
-
         _speed += _speedIncreasePerSecond * Time.deltaTime;
+
+        _spriteRenderer.sortingOrder = GetOrderFromZ(transform.position.z);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -74,6 +88,9 @@ public class PlayerManager : Singleton<PlayerManager>
             case "FinishLine":
                 _lapCount++;
                 UIManager.Instance.lapCounter.text = _lapCount.ToString();
+                break;
+            case "Flip":
+                FlipSprite();
                 break;
             default:
                 Debug.Log("This object tag is not handle by player trigger detection:" +  other.gameObject.name);
@@ -135,37 +152,41 @@ public class PlayerManager : Singleton<PlayerManager>
 
         transform.position = Vector3.MoveTowards(transform.position, (Vector3)pos, _speed * Time.deltaTime);
 
-        if (_reverse)
+        /*if (_reverse)
             transform.forward = -((Vector3)tangent).normalized;
         else
-            transform.forward = ((Vector3)tangent).normalized;
+            transform.forward = ((Vector3)tangent).normalized;*/
     }
 
-    private void SwitchLane()
+    private void RightInput()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (UIManager.Instance.InMiniGame)
+            return;
+
+        if (_reverse)
+            _laneIndex = Mathf.Min(_laneIndex + 1, 1);
+        else
+            _laneIndex = Mathf.Max(_laneIndex - 1, -1);
+        if (_prevLaneIndex != _laneIndex)
         {
-            if (_reverse)
-                _laneIndex = Mathf.Min(_laneIndex + 1, 1);
-            else
-                _laneIndex = Mathf.Max(_laneIndex - 1, -1);
-            if (_prevLaneIndex != _laneIndex)
-            {
-                _prevLaneIndex = _laneIndex;
-                UpdateTargetLane();
-            }
+            _prevLaneIndex = _laneIndex;
+            UpdateTargetLane();
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+    }
+
+    private void LeftInput()
+    {
+        if (UIManager.Instance.InMiniGame)
+            return;
+
+        if (_reverse)
+            _laneIndex = Mathf.Max(_laneIndex - 1, -1);
+        else
+            _laneIndex = Mathf.Min(_laneIndex + 1, 1);
+        if (_prevLaneIndex != _laneIndex)
         {
-            if (_reverse)
-                _laneIndex = Mathf.Max(_laneIndex - 1, -1);
-            else
-                _laneIndex = Mathf.Min(_laneIndex + 1, 1);
-            if (_prevLaneIndex != _laneIndex)
-            {
-                _prevLaneIndex = _laneIndex;
-                UpdateTargetLane();
-            }
+            _prevLaneIndex = _laneIndex;
+            UpdateTargetLane();
         }
     }
 
@@ -191,4 +212,16 @@ public class PlayerManager : Singleton<PlayerManager>
         }
         InitializeSplinePosition(transform.position);
     }
+
+    private void FlipSprite()
+    {
+        _spriteRenderer.flipX = !_spriteRenderer.flipX;
+    }
+
+    public int GetOrderFromZ(float z)
+    {
+        float t = Mathf.InverseLerp(11f, -11f, z); // Note the reversed range to flip order
+        return Mathf.RoundToInt(Mathf.Lerp(1f, 1000f, t));
+    }
+
 }
