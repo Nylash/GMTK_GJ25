@@ -77,6 +77,12 @@ public class PlayerManager : Singleton<PlayerManager>
         _spriteRenderer.sortingOrder = GetOrderFromZ(transform.position.z);
     }
 
+    public void ReverseDirection()
+    {
+        _reverse = !_reverse;
+        FlipSprite();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
