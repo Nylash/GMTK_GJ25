@@ -9,9 +9,9 @@ public class UIManager : Singleton<UIManager>
 {
     [Header("_______________________________________________")]
     [Header("UI Configuration")]
-    [SerializeField] public Image hp1;
-    [SerializeField] public Image hp2;
-    [SerializeField] public Image hp3;
+    [SerializeField] public Animator hp1;
+    [SerializeField] public Animator hp2;
+    [SerializeField] public Animator hp3;
     [SerializeField] public TextMeshProUGUI lapCounter;
     [SerializeField] private GameObject _endScreen;
     [SerializeField] private TextMeshProUGUI _endScreenLapCounter;
@@ -38,6 +38,9 @@ public class UIManager : Singleton<UIManager>
 
     private void PlayMiniGame()
     {
+        if (PlayerManager.Instance.gamePaused)
+            return;
+
         _inMiniGame = true;
         _games[Random.Range(0, _games.Count)].InitializeGame();
     }

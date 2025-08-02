@@ -20,6 +20,12 @@ public class WaterBottleGame : MiniGame
             FinishGame();
     }
 
+    protected override void FinishGame()
+    {
+        base.FinishGame();
+        PlayerManager.Instance.GainHealth();
+    }
+
     public override void InitializeGame()
     {
         _waterSprite.fillAmount = 1;

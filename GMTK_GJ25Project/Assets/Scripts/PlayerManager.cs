@@ -115,14 +115,37 @@ public class PlayerManager : Singleton<PlayerManager>
             case 0:
                 gamePaused = true;
                 UIManager.Instance.GameEnded();
-                UIManager.Instance.hp1.gameObject.SetActive(false);
+                UIManager.Instance.hp1.SetTrigger("Loss");
                 break;
             case 1:
-                UIManager.Instance.hp2.gameObject.SetActive(false);
+                UIManager.Instance.hp2.SetTrigger("Loss");
                 break;
             case 2:
-                UIManager.Instance.hp3.gameObject.SetActive(false);
+                UIManager.Instance.hp3.SetTrigger("Loss");
                  break;
+            default:
+                Debug.Log("Incorrect health value " + _currentHealth);
+                break;
+        }
+    }
+
+    public void GainHealth()
+    {
+        if (_currentHealth == 3)
+            return;
+
+        _currentHealth++;
+        switch (_currentHealth)
+        {
+            case 1:
+                UIManager.Instance.hp1.SetTrigger("Gain");
+                break;
+            case 2:
+                UIManager.Instance.hp2.SetTrigger("Gain");
+                break;
+            case 3:
+                UIManager.Instance.hp3.SetTrigger("Gain");
+                break;
             default:
                 Debug.Log("Incorrect health value " + _currentHealth);
                 break;

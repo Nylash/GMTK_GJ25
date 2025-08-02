@@ -48,6 +48,12 @@ public class BandaidGame : MiniGame
         }
     }
 
+    protected override void FinishGame()
+    {
+        base.FinishGame();
+        PlayerManager.Instance.GainHealth();
+    }
+
     public override void InitializeGame()
     {
         foreach (var item in _injuries)
