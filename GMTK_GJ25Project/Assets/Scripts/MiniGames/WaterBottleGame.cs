@@ -21,12 +21,20 @@ public class WaterBottleGame : MiniGame
 
     private void EmptyBottle()
     {
+        if (!_gameCanvas.activeSelf) return;
+
         _waterSprite.fillAmount -= _waterAmountDrinkPerAction;
         if (!_armAnimator.GetBool("Drink"))
             _armAnimator.SetBool("Drink", true);
         if (_waterSprite.fillAmount <= 0.05f)
-            FinishGame();
+            StartCoroutine(CallFinishGame());
         StartCoroutine(ResetAnim());
+    }
+
+    private IEnumerator CallFinishGame()
+    {
+        yield return new WaitForSeconds(0.5f);
+        FinishGame();
     }
 
     private IEnumerator ResetAnim()

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -114,8 +115,14 @@ public class MousquitoGame : MiniGame
             _remainingMousquitos.Remove(hit);
             _mousquitosTargetAnchors.Remove(hit);
             if (_remainingMousquitos.Count <= 0)
-                FinishGame();
+                StartCoroutine(CallFinishGame());
         }
+    }
+
+    private IEnumerator CallFinishGame()
+    {
+        yield return new WaitForSeconds(0.5f);
+        FinishGame();
     }
 
     private void MousquitoBite()
