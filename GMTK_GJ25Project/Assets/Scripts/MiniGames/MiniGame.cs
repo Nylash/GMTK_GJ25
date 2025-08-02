@@ -1,8 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class MiniGame : MonoBehaviour
 {
     [SerializeField] protected GameObject _gameCanvas;
+    [SerializeField] private List<Sprite> _sprites;
 
     protected InputSystem_Actions _inputs;
 
@@ -14,7 +17,10 @@ public abstract class MiniGame : MonoBehaviour
         _inputs = new InputSystem_Actions();
     }
 
-    public abstract void InitializeGame();
+    public virtual void InitializeGame()
+    {
+        _gameCanvas.GetComponent<Image>().sprite = _sprites[Random.Range(0, _sprites.Count)];
+    }
 
     protected virtual void FinishGame()
     {

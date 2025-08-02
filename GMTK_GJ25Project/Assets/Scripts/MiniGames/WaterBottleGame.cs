@@ -55,6 +55,7 @@ public class WaterBottleGame : MiniGame
 
     public override void InitializeGame()
     {
+        base.InitializeGame();
         _waterSprite.fillAmount = 1;
         _gameCanvas.SetActive(true);
     }

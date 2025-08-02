@@ -139,6 +139,7 @@ public class MousquitoGame : MiniGame
 
     public override void InitializeGame()
     {
+        base.InitializeGame();
         foreach (var item in _mousquitos)
         {
             item.tag = "Mousquito";

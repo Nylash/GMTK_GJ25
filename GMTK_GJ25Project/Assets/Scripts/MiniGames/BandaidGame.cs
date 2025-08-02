@@ -67,6 +67,7 @@ public class BandaidGame : MiniGame
 
     public override void InitializeGame()
     {
+        base.InitializeGame();
         foreach (var item in _injuries)
         {
             item.tag = "Injure";

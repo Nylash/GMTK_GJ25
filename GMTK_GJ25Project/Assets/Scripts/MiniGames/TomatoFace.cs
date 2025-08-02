@@ -57,6 +57,7 @@ public class TomatoFace : MiniGame
 
     public override void InitializeGame()
     {
+        base.InitializeGame();
         _ok.SetActive(false);
         int r = Random.Range(0, 21);
         if (r == 20)
