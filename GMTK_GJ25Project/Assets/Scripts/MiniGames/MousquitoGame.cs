@@ -28,6 +28,8 @@ public class MousquitoGame : MiniGame
 
     private void Update()
     {
+        if (PlayerManager.Instance.gamePaused) return;
+
         if (_cursor.gameObject.activeSelf)
         {
             _cursor.position = Input.mousePosition;
@@ -96,6 +98,8 @@ public class MousquitoGame : MiniGame
 
     private void SmashMousquito()
     {
+        if (PlayerManager.Instance.gamePaused) return;
+
         PointerEventData pointerData = new PointerEventData(EventSystem.current)
         {
             position = Input.mousePosition

@@ -29,6 +29,8 @@ public class TrackManager : Singleton<TrackManager>
 
     private Dictionary<Vector2Int, GridCell> _grid = new Dictionary<Vector2Int, GridCell>();
 
+    private float _timer;
+
     protected override void OnAwake()
     {
         _grid.Clear();
@@ -40,8 +42,19 @@ public class TrackManager : Singleton<TrackManager>
 
     private void Start()
     {
-        InvokeRepeating(nameof(SpawnObstacle), _timeBetweenObstacle, _timeBetweenObstacle);
         Invoke(nameof(ActivateFinishLine), 1f);
+    }
+
+    private void Update()
+    {
+        if (PlayerManager.Instance.gamePaused) return;
+
+        _timer += Time.deltaTime;
+        if(_timer > _timeBetweenObstacle)
+        {
+            _timer = 0;
+            SpawnObstacle();
+        }
     }
 
     private void ActivateFinishLine()
@@ -51,9 +64,6 @@ public class TrackManager : Singleton<TrackManager>
 
     private void SpawnObstacle()
     {
-        if (PlayerManager.Instance.gamePaused)
-            return;
-
         GridCell targetCell = PickRandomGridCell();
         if (targetCell == null)
             return;

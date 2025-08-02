@@ -37,6 +37,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private int _currentHealth;
     private bool _inIFrame;
+    private bool _inIFrameForHeal;
 
     private int _lapCount;
 
@@ -48,6 +49,7 @@ public class PlayerManager : Singleton<PlayerManager>
         _inputs = new InputSystem_Actions();
         _inputs.Player.Left.performed += ctx => LeftInput();
         _inputs.Player.Right.performed += ctx => RightInput();
+        _inputs.Player.Pause.performed += ctx => UIManager.Instance.PauseMenu();
     }
 
     private void Start()
@@ -131,6 +133,14 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public void GainHealth()
     {
+        if (PlayerManager.Instance.gamePaused)
+            return;
+
+        if (_inIFrameForHeal) return;
+
+        _inIFrameForHeal = true;
+        StartCoroutine(ResetIFrameHeal());
+
         if (_currentHealth == 3)
             return;
 
@@ -157,6 +167,12 @@ public class PlayerManager : Singleton<PlayerManager>
         yield return new WaitForSeconds(_iframeDuration);
         _inIFrame = false;
         _animator.SetBool("IFrame", false);
+    }
+
+    private IEnumerator ResetIFrameHeal()
+    {
+        yield return new WaitForSeconds(_iframeDuration);
+        _inIFrameForHeal = false;
     }
 
     private void PlayerMovement()
@@ -189,6 +205,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private void RightInput()
     {
+        if (gamePaused) return;
         if (UIManager.Instance.InMiniGame)
             return;
 
@@ -205,6 +222,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private void LeftInput()
     {
+        if (gamePaused) return;
         if (UIManager.Instance.InMiniGame)
             return;
 

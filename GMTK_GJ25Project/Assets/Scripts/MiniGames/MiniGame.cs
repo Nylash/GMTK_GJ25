@@ -19,6 +19,6 @@ public abstract class MiniGame : MonoBehaviour
     protected virtual void FinishGame()
     {
         _gameCanvas.SetActive(false);
-        UIManager.Instance.InvokeMiniGame();
+        UIManager.Instance.InMiniGame = false;
     }
 }

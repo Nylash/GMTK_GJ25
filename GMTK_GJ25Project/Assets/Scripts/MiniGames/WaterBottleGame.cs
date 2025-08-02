@@ -21,6 +21,8 @@ public class WaterBottleGame : MiniGame
 
     private void EmptyBottle()
     {
+        if (PlayerManager.Instance.gamePaused) return;
+
         if (!_gameCanvas.activeSelf) return;
 
         _waterSprite.fillAmount -= _waterAmountDrinkPerAction;

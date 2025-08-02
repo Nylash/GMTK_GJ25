@@ -20,6 +20,8 @@ public class TomatoFace : MiniGame
 
     private void Update()
     {
+        if (PlayerManager.Instance.gamePaused) return;
+
         if (_handCursor.gameObject.activeSelf)
         {
             _handCursor.position = Input.mousePosition;

@@ -21,12 +21,16 @@ public class BandaidGame : MiniGame
 
     private void Update()
     {
+        if (PlayerManager.Instance.gamePaused) return;
+
         if (_bandaidCursor.gameObject.activeSelf)
             _bandaidCursor.position = Input.mousePosition;
     }
 
     private void PlaceBandaid()
     {
+        if (PlayerManager.Instance.gamePaused) return;
+
         PointerEventData pointerData = new PointerEventData(EventSystem.current)
         {
             position = Input.mousePosition
