@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -44,8 +45,14 @@ public class BandaidGame : MiniGame
             hit.tag = "Untagged";
             _selectedInjuries.Remove(hit);
             if (_selectedInjuries.Count <= 0)
-                FinishGame();
+                StartCoroutine(CallFinishGame());
         }
+    }
+
+    private IEnumerator CallFinishGame()
+    {
+        yield return new WaitForSeconds(0.5f);
+            FinishGame();
     }
 
     protected override void FinishGame()
