@@ -121,10 +121,13 @@ public class PlayerManager : Singleton<PlayerManager>
                 break;
             case 1:
                 UIManager.Instance.hp2.SetTrigger("Loss");
+                StartCoroutine(FreezeForSeconds(0.1f));
+
                 break;
             case 2:
                 UIManager.Instance.hp3.SetTrigger("Loss");
-                 break;
+                StartCoroutine(FreezeForSeconds(0.1f));
+                break;
             default:
                 Debug.Log("Incorrect health value " + _currentHealth);
                 break;
@@ -271,4 +274,10 @@ public class PlayerManager : Singleton<PlayerManager>
         return Mathf.RoundToInt(Mathf.Lerp(1f, 1000f, t));
     }
 
+    IEnumerator FreezeForSeconds(float duration)
+    {
+        Time.timeScale = 0f; // Freeze time
+        yield return new WaitForSecondsRealtime(duration);
+        Time.timeScale = 1f; // Resume time
+    }
 }
