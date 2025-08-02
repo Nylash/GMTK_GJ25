@@ -36,8 +36,7 @@ public class MousquitoGame : MiniGame
             {
                 foreach (GameObject mousquito in _remainingMousquitos)
                 {
-                    if (mousquito == _currentMousquitos)
-                        continue;
+                    //if (mousquito == _currentMousquitos) continue;
 
                     timer = interval;
                     _mousquitosTargetAnchors[mousquito] = MoveAnchors(mousquito.GetComponent<RectTransform>());
@@ -116,8 +115,6 @@ public class MousquitoGame : MiniGame
             _mousquitosTargetAnchors.Remove(hit);
             if (_remainingMousquitos.Count <= 0)
                 FinishGame();
-            else
-                MousquitoBite();
         }
     }
 
@@ -133,7 +130,7 @@ public class MousquitoGame : MiniGame
     {
         foreach (var item in _mousquitos)
         {
-            item.tag = "Untagged";
+            item.tag = "Mousquito";
             item.SetActive(true);
             item.GetComponent<Animator>().enabled = true;
         }
@@ -144,7 +141,6 @@ public class MousquitoGame : MiniGame
         foreach (var item in _remainingMousquitos)
             _mousquitosTargetAnchors.Add(item, MoveAnchors(item.GetComponent<RectTransform>()));
 
-        Invoke(nameof(MousquitoBite), 0.5f);
         _cursor.gameObject.SetActive(true);
         _gameCanvas.SetActive(true);
     }

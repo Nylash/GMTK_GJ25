@@ -14,7 +14,7 @@ public class WaterBottleGame : MiniGame
     {
         base.Awake();
 
-        _inputs.Player.Action.started += ctx => EmptyBottle();
+        _inputs.Player.MouseAction.started += ctx => EmptyBottle();
 
         _initialSprite = _armAnimator.GetComponent<Image>().sprite;
     }
