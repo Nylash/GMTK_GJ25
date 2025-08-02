@@ -18,6 +18,8 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private GameObject _menu;
     [SerializeField] private Button _endReplay;
     [SerializeField] private Button _endQuit;
+    [SerializeField] private GameObject _reverseUI;
+    [SerializeField] private Vector2 _timeBetweenReverse;
     [Header("_______________________________________________")]
     [Header("Mini Games Configuration")]
     [SerializeField] private List<MiniGame> _games = new List<MiniGame>();
@@ -27,12 +29,15 @@ public class UIManager : Singleton<UIManager>
     private bool _inMiniGame;
     private float _timer;
     private float _targetTimer;
+    private float _timerReverse;
+    private float _targetTimerReverse;
 
     public bool InMiniGame { get => _inMiniGame; set => _inMiniGame = value; }
 
     private void Start()
     {
         _targetTimer = Random.Range(_timeBetweenMiniGame.x, _timeBetweenMiniGame.y);
+        _targetTimerReverse = Random.Range(_timeBetweenReverse.x, _timeBetweenReverse.y);
 
         Cursor.visible = false;
     }
@@ -50,6 +55,23 @@ public class UIManager : Singleton<UIManager>
             _targetTimer = Random.Range(_timeBetweenMiniGame.x, _timeBetweenMiniGame.y);
             PlayMiniGame();
         }
+
+        _timerReverse += Time.deltaTime;
+        if (_timerReverse > _targetTimerReverse)
+        {
+            _timerReverse = 0;
+            _targetTimerReverse = Random.Range(_timeBetweenReverse.x, _timeBetweenReverse.y);
+            _reverseUI.SetActive(true);
+            StartCoroutine(DepopReverseUI());
+        }
+    }
+
+    private IEnumerator DepopReverseUI()
+    {
+        yield return new WaitForSeconds(0.5f);
+        PlayerManager.Instance.ReverseDirection();
+        yield return new WaitForSeconds(2f);
+        _reverseUI.GetComponent<Animator>().SetTrigger("Depop");
     }
 
     public void PauseMenu()
