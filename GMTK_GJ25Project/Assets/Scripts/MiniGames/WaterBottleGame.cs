@@ -9,6 +9,7 @@ public class WaterBottleGame : MiniGame
     [SerializeField][Range(0f,1f)] private float _waterAmountDrinkPerAction;
 
     Sprite _initialSprite;
+    bool _gameEnded;
 
     protected override void Awake()
     {
@@ -29,7 +30,13 @@ public class WaterBottleGame : MiniGame
         if (!_armAnimator.GetBool("Drink"))
             _armAnimator.SetBool("Drink", true);
         if (_waterSprite.fillAmount <= 0.05f)
-            StartCoroutine(CallFinishGame());
+        {
+            if (!_gameEnded)
+            {
+                _gameEnded = true;
+                StartCoroutine(CallFinishGame());
+            }
+        }
         StartCoroutine(ResetAnim());
     }
 
@@ -56,6 +63,7 @@ public class WaterBottleGame : MiniGame
     public override void InitializeGame()
     {
         base.InitializeGame();
+        _gameEnded = false;
         _waterSprite.fillAmount = 1;
         _gameCanvas.SetActive(true);
     }

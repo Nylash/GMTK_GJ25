@@ -37,7 +37,6 @@ public class PlayerManager : Singleton<PlayerManager>
 
     private int _currentHealth;
     private bool _inIFrame;
-    private bool _inIFrameForHeal;
 
     private int _lapCount;
 
@@ -139,11 +138,6 @@ public class PlayerManager : Singleton<PlayerManager>
         if (PlayerManager.Instance.gamePaused)
             return;
 
-        if (_inIFrameForHeal) return;
-
-        _inIFrameForHeal = true;
-        StartCoroutine(ResetIFrameHeal());
-
         if (_currentHealth == 3)
             return;
 
@@ -170,12 +164,6 @@ public class PlayerManager : Singleton<PlayerManager>
         yield return new WaitForSeconds(_iframeDuration);
         _inIFrame = false;
         _animator.SetBool("IFrame", false);
-    }
-
-    private IEnumerator ResetIFrameHeal()
-    {
-        yield return new WaitForSeconds(_iframeDuration);
-        _inIFrameForHeal = false;
     }
 
     private void PlayerMovement()
