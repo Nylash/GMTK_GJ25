@@ -32,6 +32,8 @@ public class UIManager : Singleton<UIManager>
     private float _timerReverse;
     private float _targetTimerReverse;
 
+    private MiniGame _previousMiniGame = null;
+
     public bool InMiniGame { get => _inMiniGame; set => _inMiniGame = value; }
 
     private void Start()
@@ -68,7 +70,7 @@ public class UIManager : Singleton<UIManager>
 
     private IEnumerator DepopReverseUI()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         PlayerManager.Instance.ReverseDirection();
         yield return new WaitForSeconds(2f);
         _reverseUI.GetComponent<Animator>().SetTrigger("Depop");
@@ -81,6 +83,7 @@ public class UIManager : Singleton<UIManager>
         PlayerManager.Instance.gamePaused = !PlayerManager.Instance.gamePaused;
         _menu.SetActive(!_menu.activeSelf);
         Cursor.visible = !Cursor.visible;
+        PlayerManager.Instance.MovementAnimator.speed = PlayerManager.Instance.gamePaused ? 0 : 1;
     }
 
     private void PlayMiniGame()
@@ -89,7 +92,14 @@ public class UIManager : Singleton<UIManager>
             return;
 
         _inMiniGame = true;
-        _games[Random.Range(0, _games.Count)].InitializeGame();
+
+        MiniGame tmp = _games[Random.Range(0, _games.Count)];
+
+        while (tmp == _previousMiniGame) 
+            tmp = _games[Random.Range(0, _games.Count)];
+            
+        tmp.InitializeGame();
+        _previousMiniGame = tmp;
     }
 
     public void Reload()
@@ -108,6 +118,7 @@ public class UIManager : Singleton<UIManager>
         _endScreen.SetActive(true);
         PlayerManager.Instance.gamePaused = true;
         Cursor.visible = true;
+        PlayerManager.Instance.MovementAnimator.speed = 0;
         foreach (var item in _games)
             item.gameObject.SetActive(false);
         StartCoroutine(ActivateEndButtons());

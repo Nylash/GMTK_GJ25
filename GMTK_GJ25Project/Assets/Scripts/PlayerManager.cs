@@ -12,6 +12,7 @@ public class PlayerManager : Singleton<PlayerManager>
     [Header("Player Movement")]
     [SerializeField] private float _initialSpeed;
     [SerializeField] private float _speedIncreasePerSecond;
+    [SerializeField] private float _animationSpeedIncreasePerSecond;
     [SerializeField] private bool _reverse;
     [SerializeField] private Transform debugCube;
     [Header("_______________________________________________")]
@@ -24,6 +25,7 @@ public class PlayerManager : Singleton<PlayerManager>
     private InputSystem_Actions _inputs;
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
+    private Animator _movementAnimator;
 
     private Spline _centralLane;
     private Spline _exteriorLane;
@@ -39,6 +41,8 @@ public class PlayerManager : Singleton<PlayerManager>
     private bool _inIFrame;
 
     private int _lapCount;
+
+    public Animator MovementAnimator { get => _movementAnimator; }
 
     private void OnEnable() => _inputs.Player.Enable();
     private void OnDisable() => _inputs.Player.Disable();
@@ -64,6 +68,7 @@ public class PlayerManager : Singleton<PlayerManager>
         InitializeSplinePosition(transform.position);
 
         _animator = GetComponent<Animator>();
+        _movementAnimator = transform.GetChild(0).GetComponent<Animator>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
@@ -74,6 +79,7 @@ public class PlayerManager : Singleton<PlayerManager>
         PlayerMovement();
 
         _speed += _speedIncreasePerSecond * Time.deltaTime;
+        _movementAnimator.SetFloat("Speed", _movementAnimator.GetFloat("Speed") + _animationSpeedIncreasePerSecond * Time.deltaTime);
 
         _spriteRenderer.sortingOrder = GetOrderFromZ(transform.position.z);
     }
