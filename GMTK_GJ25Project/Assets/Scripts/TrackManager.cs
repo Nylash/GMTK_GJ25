@@ -22,6 +22,8 @@ public class TrackManager : Singleton<TrackManager>
     [SerializeField] private float _timeBetweenObstacle = 5f;
     [SerializeField] private float _minDistanceWithPlayer = 5f;
     [SerializeField] private GameObject _VFXpop;
+    [SerializeField] private AudioClip _audioSpawnObs;
+    [SerializeField][Range(0f, 2f)] private float _volumeSpawnObs = 1f;
 
     public SplineContainer ContainerCentralLane { get => _containerCentralLane; }
     public SplineContainer ContainerExteriorLane { get => _containerExteriorLane; }
@@ -67,6 +69,9 @@ public class TrackManager : Singleton<TrackManager>
         GridCell targetCell = PickRandomGridCell();
         if (targetCell == null)
             return;
+
+        AudioSource source = UIManager.Instance.SpawnAudioSource();
+        source.PlayOneShot(_audioSpawnObs, _volumeSpawnObs);
 
         Instantiate(_VFXpop, targetCell.WorldPosition, Quaternion.identity);
 

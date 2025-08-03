@@ -20,6 +20,11 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private Button _endQuit;
     [SerializeField] private GameObject _reverseUI;
     [SerializeField] private Vector2 _timeBetweenReverse;
+    [SerializeField] private GameObject _soundPrefab;
+    [SerializeField] private AudioClip _audioReverse;
+    [SerializeField][Range(0f, 2f)] private float _reverseVolume = 1f;
+    [SerializeField] private AudioClip _audioEnd;
+    [SerializeField][Range(0f, 2f)] private float _endVolume = 1f;
     [Header("_______________________________________________")]
     [Header("Mini Games Configuration")]
     [SerializeField] private List<MiniGame> _games = new List<MiniGame>();
@@ -68,8 +73,24 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
+    public AudioSource SpawnAudioSource(bool saveObject = false)
+    {
+        GameObject obj = Instantiate(_soundPrefab, _soundPrefab.transform.position, _soundPrefab.transform.rotation);
+        if (!saveObject)
+            StartCoroutine(DestroyAudioSource(obj));
+        return obj.GetComponent<AudioSource>();
+    }
+
+    private IEnumerator DestroyAudioSource(GameObject obj)
+    {
+        yield return new WaitForSeconds(2.1f);
+        Destroy(obj);
+    }
+
     private IEnumerator DepopReverseUI()
     {
+        AudioSource source = SpawnAudioSource();
+        source.PlayOneShot(_audioReverse, _reverseVolume);
         yield return new WaitForSeconds(1f);
         PlayerManager.Instance.ReverseDirection();
         yield return new WaitForSeconds(2f);
@@ -122,6 +143,8 @@ public class UIManager : Singleton<UIManager>
         foreach (var item in _games)
             item.gameObject.SetActive(false);
         StartCoroutine(ActivateEndButtons());
+        AudioSource source = SpawnAudioSource(true);
+        source.PlayOneShot(_audioEnd, _endVolume);
     }
 
     private IEnumerator ActivateEndButtons()

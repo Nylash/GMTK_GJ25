@@ -45,6 +45,8 @@ public class BandaidGame : MiniGame
 
         if (hit != null)
         {
+            AudioSource source = UIManager.Instance.SpawnAudioSource();
+            source.PlayOneShot(_sounds[Random.Range(0, _sounds.Count)], _soundVolume);
             hit.transform.GetChild(0).gameObject.SetActive(true);
             hit.tag = "Untagged";
             _selectedInjuries.Remove(hit);

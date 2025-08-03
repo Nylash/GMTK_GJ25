@@ -27,6 +27,8 @@ public class WaterBottleGame : MiniGame
         if (!_gameCanvas.activeSelf) return;
 
         _waterSprite.fillAmount -= _waterAmountDrinkPerAction;
+        AudioSource source = UIManager.Instance.SpawnAudioSource();
+        source.PlayOneShot(_sounds[Random.Range(0, _sounds.Count)], _soundVolume);
         if (!_armAnimator.GetBool("Drink"))
             _armAnimator.SetBool("Drink", true);
         if (_waterSprite.fillAmount <= 0.05f)

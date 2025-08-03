@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -14,7 +15,10 @@ public class PlayerManager : Singleton<PlayerManager>
     [SerializeField] private float _speedIncreasePerSecond;
     [SerializeField] private float _animationSpeedIncreasePerSecond;
     [SerializeField] private bool _reverse;
-    [SerializeField] private Transform debugCube;
+    [SerializeField] private AudioClip _audioHit;
+    [SerializeField][Range(0f, 2f)] private float _hitVolume = 1f;
+    [SerializeField] private AudioClip _audioHeal;
+    [SerializeField][Range(0f, 2f)] private float _healVolume = 1f;
     [Header("_______________________________________________")]
     [Header("Player Health")]
     [SerializeField] private int _initialHealth = 3;
@@ -137,6 +141,8 @@ public class PlayerManager : Singleton<PlayerManager>
                 Debug.Log("Incorrect health value " + _currentHealth);
                 break;
         }
+        AudioSource source = UIManager.Instance.SpawnAudioSource();
+        source.PlayOneShot(_audioHit, _hitVolume);
     }
 
     public void GainHealth()
@@ -163,6 +169,8 @@ public class PlayerManager : Singleton<PlayerManager>
                 Debug.Log("Incorrect health value " + _currentHealth);
                 break;
         }
+        AudioSource source = UIManager.Instance.SpawnAudioSource();
+        source.PlayOneShot(_audioHeal, _healVolume);
     }
 
     private IEnumerator ResetIFrame()
@@ -187,8 +195,6 @@ public class PlayerManager : Singleton<PlayerManager>
         }
 
         float3 pos = SplineUtility.EvaluatePosition(_targetLane, _normalizedT);
-
-        debugCube.position = (Vector3)pos;
 
         float3 tangent = SplineUtility.EvaluateTangent(_targetLane, _normalizedT);
 

@@ -6,6 +6,8 @@ public abstract class MiniGame : MonoBehaviour
 {
     [SerializeField] protected GameObject _gameCanvas;
     [SerializeField] private List<Sprite> _sprites;
+    [SerializeField] protected List<AudioClip> _sounds;
+    [SerializeField][Range(0f, 2f)] protected float _soundVolume;
 
     protected InputSystem_Actions _inputs;
 

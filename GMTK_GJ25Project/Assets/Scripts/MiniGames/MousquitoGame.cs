@@ -114,6 +114,8 @@ public class MousquitoGame : MiniGame
 
         if (hit != null)
         {
+            AudioSource source = UIManager.Instance.SpawnAudioSource();
+            source.PlayOneShot(_sounds[Random.Range(0, _sounds.Count)], _soundVolume);
             hit.gameObject.SetActive(false);
             hit.tag = "Untagged";
             _remainingMousquitos.Remove(hit);

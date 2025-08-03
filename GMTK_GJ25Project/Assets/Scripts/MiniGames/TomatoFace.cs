@@ -40,6 +40,8 @@ public class TomatoFace : MiniGame
 
             if (hit != null)
             {
+                AudioSource source = UIManager.Instance.SpawnAudioSource();
+                source.PlayOneShot(_sounds[Random.Range(0, _sounds.Count)], _soundVolume);
                 hit.SetActive(false);
                 hit.tag = "Untagged";
                 _selectedPieces.Remove(hit);
