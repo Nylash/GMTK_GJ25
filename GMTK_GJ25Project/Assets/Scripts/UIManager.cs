@@ -140,6 +140,7 @@ public class UIManager : Singleton<UIManager>
         PlayerManager.Instance.gamePaused = true;
         Cursor.visible = true;
         PlayerManager.Instance.MovementAnimator.speed = 0;
+        PlayerManager.Instance.MovementAnimator.gameObject.SetActive(false);
         foreach (var item in _games)
             item.gameObject.SetActive(false);
         StartCoroutine(ActivateEndButtons());

@@ -209,8 +209,6 @@ public class PlayerManager : Singleton<PlayerManager>
     private void RightInput()
     {
         if (gamePaused) return;
-        if (UIManager.Instance.InMiniGame)
-            return;
 
         if (_reverse)
             _laneIndex = Mathf.Min(_laneIndex + 1, 1);
@@ -226,8 +224,6 @@ public class PlayerManager : Singleton<PlayerManager>
     private void LeftInput()
     {
         if (gamePaused) return;
-        if (UIManager.Instance.InMiniGame)
-            return;
 
         if (_reverse)
             _laneIndex = Mathf.Max(_laneIndex - 1, -1);

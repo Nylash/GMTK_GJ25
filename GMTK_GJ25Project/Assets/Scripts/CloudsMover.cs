@@ -23,7 +23,7 @@ public class CloudsMover : MonoBehaviour
 
         while (obj.transform.position.x < 78f)
         {
-            obj.transform.position += new Vector3(speed, 0, 0);
+            obj.transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
 
             if (!hasSpawnedNext && obj.transform.position.x >= 0f)
             {
